@@ -1,0 +1,552 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 testtab"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "testtab，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2012",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_YOUHUA_DIALOG DIALOGEX 0, 0, 545, 415
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTERMOUSE | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "优化大师"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TAB1,"SysTabControl32",TCS_FIXEDWIDTH,7,7,482,392
+END
+
+IDD_NETWORK DIALOGEX 0, 0, 608, 426
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,542,337
+    CONTROL         "自动刷新",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,349,50,10
+END
+
+IDD_TASKMGR DIALOGEX 0, 0, 631, 461
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,17,15,538,322
+    LTEXT           "",IDC_NUM_PROC,28,352,60,16
+    LTEXT           "",IDC_MEM_USE,147,352,60,16
+END
+
+IDD_REGEDIT DIALOGEX 0, 0, 514, 356
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "注册表清理",IDC_CLEARREG,394,83,60,36
+    CONTROL         "无效的开始菜单",IDC_CHECKNOSTARTMENU,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,297,87,72,10
+    CONTROL         "无效的右键菜单",IDC_CHECKRCLICK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,297,113,72,10
+    CONTROL         "无效的软件信息",IDC_CHECKSOFTINFO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,297,132,72,10
+    LTEXT           "准备扫描",IDC_STATIC_SCANREGPATH,20,25,476,22
+    PUSHBUTTON      "结束扫描",IDC_BUTTON_STOPSCAN,397,134,51,34,BS_ICON
+    CONTROL         "C盘大文件清理",IDC_CHECKBIGFILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,297,153,69,10
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,185,500,163
+    LTEXT           "静态",IDC_STATIC_VAILDSTARTMENU,281,78,26,8
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,57,34,380,14
+    CONTROL         "",IDC_TREE2,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | WS_BORDER | WS_HSCROLL | WS_TABSTOP,7,53,269,120
+END
+
+IDD_FILEEXPLORER DIALOGEX 0, 0, 523, 359
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LISTEN,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,513,247
+    LTEXT           "监视目录：",IDC_STATIC_PATH,11,259,383,13
+    CONTROL         "自动开始监视",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_LEFT | WS_TABSTOP,15,273,64,10
+    CONTROL         "窗口总在前面",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,299,64,10
+    PUSHBUTTON      "开始监视",IDC_STARTMONITOR,172,274,44,20
+    PUSHBUTTON      "浏览",IDC_BUTTON_CHOICEPATH,476,258,44,20
+    PUSHBUTTON      "清空所有",IDC_BUTTON_CLEARALL,238,274,44,20
+    PUSHBUTTON      "选项",IDC_BUTTON_OPTION,306,274,44,20
+    PUSHBUTTON      "导出为html",IDC_BUTTON_EXPORT,239,315,44,20
+    PUSHBUTTON      "停止监视",IDC_BUTTON_STOP,175,313,44,20
+END
+
+IDD_STARTMANGE DIALOGEX 0, 0, 531, 330
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,14,14,439,247
+    PUSHBUTTON      "360怎么破disable",IDC_BUTTON1,7,284,83,38
+END
+
+IDD_SELECT DIALOGEX 0, 0, 187, 121
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "监视设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "请选择要监视的目录",IDC_STATIC,16,15,87,91
+    CONTROL         "添加新文件",IDC_CHECK_ADDNEW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,32,87,8
+    CONTROL         "删除文件",IDC_CHECK__DELFILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,49,87,8
+    CONTROL         "重命名文件",IDC_CHECK_RENAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,65,87,8
+    CONTROL         "修改文件属性",IDC_CHECK_MODIFY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,78,87,8
+    CONTROL         "其他",IDC_CHECK_OTHERS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,91,87,8
+    PUSHBUTTON      "全选",IDC_BUTTON_SELECTALL,130,28,50,14
+    PUSHBUTTON      "反选",IDC_BUTTON_REVERSELECT,130,62,50,14
+END
+
+IDD_DIALOGSYSTEMINFO DIALOGEX 0, 0, 540, 400
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_IPADDRESS,"SysIPAddress32",WS_TABSTOP,54,46,100,15
+    CONTROL         "",IDC_IPADDRESS2,"SysIPAddress32",WS_TABSTOP,54,70,100,15
+    CONTROL         "",IDC_IPADDRESS3,"SysIPAddress32",WS_TABSTOP,54,95,100,15
+    CONTROL         "",IDC_IPADDRESS4,"SysIPAddress32",WS_TABSTOP,54,127,100,15
+    CONTROL         "",IDC_IPADDRESS5,"SysIPAddress32",WS_TABSTOP,54,159,100,15
+    LTEXT           "IP",IDC_STATIC,17,49,10,8
+    LTEXT           "Mask",IDC_STATIC,15,71,36,8
+    LTEXT           "Gate",IDC_STATIC,18,98,19,8
+    LTEXT           "DNS 1",IDC_STATIC,17,129,23,8
+    LTEXT           "DNS 2",IDC_STATIC,17,161,36,8
+    EDITTEXT        IDC_EDIT1,58,185,97,14,ES_AUTOHSCROLL
+    LTEXT           "MAC",IDC_STATIC,19,190,30,8
+    PUSHBUTTON      "应用",IDC_BUTTONAPPLY,71,214,50,14
+END
+
+IDD_DIALOGMAIN DIALOGEX 0, 0, 301, 193
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Winodws优化大师"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "清理大师",IDC_BUTTON_CLEAR,84,29,50,39
+    PUSHBUTTON      "优化大师",IDC_BUTTON_YOUHUA,23,29,50,39
+    PUSHBUTTON      "美化大师",IDC_BUTTON_MEIHUA,147,29,50,39
+    PUSHBUTTON      "Button1",IDC_BUTTON1,103,115,50,14
+END
+
+IDD_CLEARMASTER_DIALOG DIALOGEX 0, 0, 559, 385
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "清理大师"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TAB1,"SysTabControl32",TCS_MULTILINE,7,7,545,361
+END
+
+IDD_MEIHUA_DIALOG DIALOGEX 0, 0, 542, 354
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "美化大师"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TAB1,"SysTabControl32",0x0,7,7,519,333
+END
+
+IDD_DIALOG_CLEARHISTORY DIALOGEX 0, 0, 355, 273
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "清除Internet临时文件",IDC_CHECK_CLEARINTERNET,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,89,91,10
+    CONTROL         "Cookie的清除",IDC_CHECK_CLEARCOOKIES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,108,61,10
+    CONTROL         "浏览器地址栏历史地址的清除",IDC_CHECK_CLEARBWOSER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,129,120,10
+    CONTROL         "清除自动密码历史记录",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,148,96,10
+    CONTROL         "清空回收站",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,164,56,10
+    CONTROL         "清除""运行""中的自动匹配历史记录",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,180,133,10
+    CONTROL         "清除浏览网址历史记录",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,201,96,10
+    PUSHBUTTON      "开始清理",IDC_BUTTON_STARTCLEAR,209,156,41,23
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,37,43,298,14
+    PUSHBUTTON      "结束清理",IDC_BUTTON_ENDCLEAR,263,156,41,23
+END
+
+IDD_DIALOGCLEANRUBBISH DIALOGEX 0, 0, 366, 268
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "清除系统文件.temp",IDC_CHECK_CLEAN_TEMP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,19,83,10
+    CONTROL         "清除系统文件.log",IDC_CHECK_CELANLOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,38,76,10
+    CONTROL         "清除系统文件.gid",IDC_CHECK_CLEANGID,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,64,76,10
+    CONTROL         "清除系统临时.old",IDC_CHECK_CLEAN_OLD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,87,76,10
+    PUSHBUTTON      "扫描",IDC_BUTTONSTARTSCAN,167,26,50,14
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,19,131,307,14
+    PUSHBUTTON      "结束扫描",IDC_BUTTON_STOPSCAN,231,26,50,14
+END
+
+IDD_DIALOG_USBSHADU DIALOGEX 0, 0, 517, 330
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "文件夹病毒专杀",IDC_STATIC,7,6,487,317
+    PUSHBUTTON      "开始扫描",IDC_BUTTON_SCAN,275,69,50,18
+    LTEXT           "扫描路径",IDC_STATIC_SCANPATH,17,105,418,17
+    CONTROL         "",IDC_LISTVIRUS,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,21,170,457,153
+    PUSHBUTTON      "结束扫描",IDC_BUTTON_STOPSCAN,343,70,50,14
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,31,52,400,14
+    LTEXT           "未有U盘插入",IDC_STATIC_USBSTATE,105,30,54,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "testtab.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "testtab.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_YOUHUA_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 538
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 408
+    END
+
+    IDD_NETWORK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 580
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 418
+    END
+
+    IDD_TASKMGR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 624
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 454
+    END
+
+    IDD_REGEDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 507
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 348
+    END
+
+    IDD_FILEEXPLORER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 520
+        VERTGUIDE, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 335
+    END
+
+    IDD_STARTMANGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 524
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 322
+    END
+
+    IDD_SELECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 113
+    END
+
+    IDD_DIALOGSYSTEMINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 533
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 393
+    END
+
+    IDD_DIALOGMAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 294
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 186
+    END
+
+    IDD_CLEARMASTER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 552
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 378
+    END
+
+    IDD_MEIHUA_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 535
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 347
+    END
+
+    IDD_DIALOG_CLEARHISTORY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 348
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 266
+    END
+
+    IDD_DIALOGCLEANRUBBISH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+    END
+
+    IDD_DIALOG_USBSHADU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 510
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 323
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENUTASKMGR MENU 
+BEGIN
+    POPUP "popup"
+    BEGIN
+        MENUITEM "刷新列表",                        ID_REFERSHLIST
+        MENUITEM "定位进程",                        ID_LocatePro
+        MENUITEM "结束进程",                        ID_KILLPRO
+        MENUITEM "百度一下",                        ID_BAIDUSEARCH
+        MENUITEM "结束所有该进程",                     ID_POPUP_KILLALL
+    END
+END
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "dddd"
+    BEGIN
+        MENUITEM "删除这一项",                       ID_DLETEITEM
+        MENUITEM "打开这一项",                       ID_OPENITEM
+    END
+END
+
+IDR_MENU2 MENU 
+BEGIN
+    POPUP "点我"
+    BEGIN
+        MENUITEM "优化大师",                        ID_YOUHUA
+        MENUITEM "美化大师",                        ID_MEIHUA
+        MENUITEM "清理大师",                        ID_CLEAR
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "res\\SRV.ico"
+IDI_ICON2               ICON                    "res\\FILE.ico"
+IDI_ICON3               ICON                    "res\\INFO.ico"
+IDI_ICON4               ICON                    "res\\PORT.ico"
+IDI_ICON5               ICON                    "res\\PROCESS.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_HTML_SYSTEMINFODLG  HTML                    "SystemInfoDlg.htm"
+IDR_HTML_DLGCLEANRUBBISH HTML                    "DlgCleanRubbish.htm"
+IDR_HTML_BEAUMASTER     HTML                    "BeauMaster.htm"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// ZIP
+//
+
+IDR_360SAFEZIP          ZIP                     "res\\360SafeRes.zip"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP2             BITMAP                  "res\\systeminfo.bmp"
+//IDB_BITMAP1             BITMAP                  "res\\001a.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 testtab(&A)..."
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(英国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\testtab.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\testtab.rc2""  // ? Microsoft Visual C++ ?????\r\n"
+    "#include ""l.CHS\\afxres.rc""      // ????\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 英语(英国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\testtab.rc2"  // ? Microsoft Visual C++ ?????
+#include "l.CHS\afxres.rc"      // ????
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
