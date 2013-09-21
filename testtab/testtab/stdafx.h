@@ -43,7 +43,7 @@
 #pragma comment(lib, "psapi.lib")
 #pragma comment(lib,"version.lib")
 
-
+/*
 #ifdef _DEBUG
 #   ifdef _UNICODE
 #       pragma comment(lib, "lib/DuiLib_ud.lib")
@@ -57,7 +57,7 @@
 #       pragma comment(lib, "lib/DuiLib.lib")
 #   endif
 #endif
-
+*/
 typedef struct  
 {
 	DWORD	dwProID;			    //½ø³ÌID

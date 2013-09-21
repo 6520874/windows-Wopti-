@@ -25,7 +25,6 @@
 #define IDI_ICON5                       149
 #define IDI_ICON6                       150
 #define IDR_MENU1                       151
-#define IDD_DIALOGSYSTEMINFO            152
 #define IDD_DIALOG1                     153
 #define IDB_BITMAP1                     154
 #define IDB_BITMAP2                     155
@@ -37,6 +36,8 @@
 #define IDR_MENU2                       165
 #define IDD_DIALOGCLEANRUBBISH          166
 #define IDD_DIALOG_USBSHADU             169
+#define IDD_DIALOG2                     170
+#define IDD_DIALOGSYSTEMINFO            170
 #define IDC_TAB1                        1000
 #define IDC_LIST2                       1004
 #define IDC_LIST1                       1007
@@ -87,16 +88,10 @@
 #define IDC_BUTTON2                     1044
 #define IDC_BUTTONSTARTSCAN             1044
 #define IDC_BUTTON_STARTCLEAR           1044
+#define IDC_CHECK_DLL                   1044
 #define IDC_BUTTON3                     1045
 #define IDC_STATIC_VAILDSTARTMENU       1045
 #define IDC_BUTTON_ENDCLEAR             1045
-#define IDC_EDIT1                       1046
-#define IDC_IPADDRESS                   1047
-#define IDC_IPADDRESS2                  1048
-#define IDC_IPADDRESS3                  1049
-#define IDC_IPADDRESS4                  1050
-#define IDC_IPADDRESS5                  1051
-#define IDC_BUTTONAPPLY                 1052
 #define IDC_CHECK_CLEAN_TEMP            1054
 #define IDC_CHECK_CELANLOG              1055
 #define IDC_TREE2                       1056
@@ -135,9 +130,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        170
+#define _APS_NEXT_RESOURCE_VALUE        171
 #define _APS_NEXT_COMMAND_VALUE         32795
-#define _APS_NEXT_CONTROL_VALUE         1069
+#define _APS_NEXT_CONTROL_VALUE         1070
 #define _APS_NEXT_SYMED_VALUE           106
 #endif
 #endif

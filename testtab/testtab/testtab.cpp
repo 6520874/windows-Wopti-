@@ -61,14 +61,14 @@ BOOL CtesttabApp::InitInstance()
     //skinppLoadSkin(L"Aura.ssk");
      //skinppLoadSkinFromRes(m_hInstance,NULL,NULL,);
 	 //skinppRemoveSkin();
-	CMainDlg dlg;
+	 CYouHuaDlg  dlg ;
 	m_pMainWnd = &dlg;
 
-	dlg.Create(IDD_DIALOGMAIN ); //创建为非模态对话框
-	//dlg.DoModal();
-	dlg.ShowWindow(SW_HIDE);        //创建完毕后，可以设置对话框的显示方式，正常为“SW_SHOW”，
+	//dlg.Create(IDD_DIALOGMAIN ); //创建为非模态对话框
+	dlg.DoModal();
+	//dlg.ShowWindow(SW_HIDE);        //创建完毕后，可以设置对话框的显示方式，正常为“SW_SHOW”，
 	//在此，我们使用“SW_HIDE”将对话框隐藏，但是在进程列表中仍然可以看到
-	dlg.RunModalLoop();                  //消息循环
+	//dlg.RunModalLoop();                  //消息循环
 	// 由于对话框已关闭，所以将返回 FALSE 以便退出应用程序，
 	//  而不是启动应用程序的消息泵。
 	return FALSE;

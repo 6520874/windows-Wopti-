@@ -63,7 +63,7 @@ void CMainDlg::OnBnClickedButtonMeihua()
 
 }
 
-   C360SafeUI m_Dlg360Safe1;
+   //C360SafeUI m_Dlg360Safe1;
 BOOL CMainDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
@@ -87,9 +87,9 @@ BOOL CMainDlg::OnInitDialog()
 	//SetIcon(m_hIcon, TRUE);			// 设置大图标
 	//SetIcon(m_hIcon, FALSE);		// 设置小图标
 
-	::SetWindowLongPtr(GetSafeHwnd(), GWLP_USERDATA, reinterpret_cast<LPARAM>(&m_Dlg360Safe1));
-	m_Dlg360Safe1.Subclass(GetSafeHwnd());
-	m_Dlg360Safe1.LoadSkin();
+	//::SetWindowLongPtr(GetSafeHwnd(), GWLP_USERDATA, reinterpret_cast<LPARAM>(&m_Dlg360Safe1));
+	//m_Dlg360Safe1.Subclass(GetSafeHwnd());
+	//m_Dlg360Safe1.LoadSkin();
 
 	 
 	// by spf  ShellExecute(NULL,L"open",L"Follow.exe",NULL,NULL,SW_SHOW);
