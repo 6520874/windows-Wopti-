@@ -40,8 +40,8 @@ public:
 	CNetWorkDlg   m_para2;
 	CFileExplorer m_para3;
 	CStartMagDlg  m_para4;
-	CSystemInfoDlg m_para5;
-
+	CRegeDitDlg m_para5;
+    
 	CImageList    m_ImageTab;
 	afx_msg void OnTcnSelchangeTab1(NMHDR *pNMHDR, LRESULT *pResult);
 	afx_msg void OnBnClickedButton1();

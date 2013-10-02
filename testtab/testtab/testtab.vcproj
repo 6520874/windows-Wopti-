@@ -218,6 +218,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\DDDD.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\FileExplorer.cpp"
 				>
 			</File>
@@ -317,6 +321,10 @@
 			</File>
 			<File
 				RelativePath=".\CTaskMgr.h"
+				>
+			</File>
+			<File
+				RelativePath=".\DDDD.h"
 				>
 			</File>
 			<File
@@ -444,6 +452,11 @@
 		</Filter>
 		<File
 			RelativePath=".\BeauMaster.htm"
+			DeploymentContent="true"
+			>
+		</File>
+		<File
+			RelativePath=".\DDDD.htm"
 			DeploymentContent="true"
 			>
 		</File>

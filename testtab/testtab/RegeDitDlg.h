@@ -43,12 +43,12 @@ public:
 	void DisplayPath(CString   path);             //路径变量
 	void DisplayCFileSize(CString   path);        //选择C盘文件大小
 	void DisplayRegSoftFile();                    //选择注册表软件信息
-    void CheckChoice();                           //选择清理的选项
+	void CheckChoice();                           //选择清理的选项
 	BOOL IsExist(HKEY hKey,LPCTSTR lpSubKey);     //是否存在
 	BOOL FindSubKey(HKEY hKey,LPCTSTR lpSubKey);  //查找子项
 	void DispayRegKeyPath(HKEY h1,TCHAR s[]);
 	void GetKeyToValue(HKEY  h1);                 //获取一个项对应的值
-    static 	UINT __cdecl Clearthread( LPVOID pParam );
+	static 	UINT __cdecl Clearthread( LPVOID pParam );
 private:
 	CTreeCtrl m_DiskTree;
 };

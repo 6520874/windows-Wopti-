@@ -72,6 +72,7 @@ BOOL CRegeDitDlg::OnInitDialog()
 	m_clearitmelist.InsertColumn(2,L"大小MB",LVCFMT_CENTER,150);
 	m_clearitmelist.SetExtendedStyle(LVS_EX_FULLROWSELECT | LVS_EX_GRIDLINES);  //设置网格，全行选中
 	m_clearitmelist.SetBkColor(RGB(255, 255 ,0));	//设置背景色为白色
+    m_Buttonbigfile.SetCheck(TRUE);
 
 	return TRUE;  // return TRUE unless you set the focus to a control
 	// 异常: OCX 属性页应返回 FALSE

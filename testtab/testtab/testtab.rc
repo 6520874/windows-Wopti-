@@ -72,7 +72,7 @@ IDD_REGEDIT DIALOGEX 0, 0, 514, 356
 STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    PUSHBUTTON      "注册表清理",IDC_CLEARREG,394,83,60,36
+    PUSHBUTTON      "开始清理",IDC_CLEARREG,394,83,60,36
     CONTROL         "无效的开始菜单",IDC_CHECKNOSTARTMENU,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,297,87,72,10
     CONTROL         "无效的右键菜单",IDC_CHECKRCLICK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,297,113,72,10
     CONTROL         "无效的软件信息",IDC_CHECKSOFTINFO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,297,132,72,10
@@ -107,7 +107,7 @@ STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,14,14,439,247
-    PUSHBUTTON      "360怎么破disable",IDC_BUTTON1,7,284,83,38
+    PUSHBUTTON      "360怎么破disable",IDC_BUTTONCLearMaster,7,268,83,38
 END
 
 IDD_SELECT DIALOGEX 0, 0, 187, 121
@@ -198,7 +198,7 @@ IDD_DIALOGSYSTEMINFO DIALOGEX 0, 0, 385, 294
 STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    CONTROL         "",IDC_TREE1,"SysTreeView32",WS_BORDER | WS_HSCROLL | WS_TABSTOP,7,7,362,239
+    PUSHBUTTON      "清理大师",IDC_BUTTONCLEAN,57,105,53,28
 END
 
 
@@ -428,6 +428,7 @@ IDI_ICON5               ICON                    "res\\PROCESS.ICO"
 
 IDR_HTML_DLGCLEANRUBBISH HTML                    "DlgCleanRubbish.htm"
 IDR_HTML_BEAUMASTER     HTML                    "BeauMaster.htm"
+IDR_HTML_DDDD           HTML                    "DDDD.htm"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -435,13 +436,6 @@ IDR_HTML_BEAUMASTER     HTML                    "BeauMaster.htm"
 //
 
 IDR_360SAFEZIP          ZIP                     "res\\360SafeRes.zip"
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// Bitmap
-//
-
-IDB_BITMAP2             BITMAP                  "res\\systeminfo.bmp"
 
 /////////////////////////////////////////////////////////////////////////////
 //

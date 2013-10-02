@@ -10,6 +10,7 @@
 #define IDR_HTML_SYSTEMINFODLG          103
 #define IDR_HTML_DLGCLEANRUBBISH        104
 #define IDR_HTML_BEAUMASTER             105
+#define IDR_HTML_DDDD                   106
 #define IDR_MAINFRAME                   128
 #define IDD_NETWORK                     130
 #define IDD_TASKMGR                     133
@@ -27,7 +28,6 @@
 #define IDR_MENU1                       151
 #define IDD_DIALOG1                     153
 #define IDB_BITMAP1                     154
-#define IDB_BITMAP2                     155
 #define IDD_DIALOGMAIN                  156
 #define IDD_CLEARMASTER_DIALOG          157
 #define IDD_MEIHUA_DIALOG               158
@@ -101,6 +101,8 @@
 #define IDC_LISTVIRUS                   1065
 #define IDC_NUM_PROC                    1067
 #define IDC_MEM_USE                     1068
+#define IDC_BUTTONCLEAN                 1070
+#define IDC_BUTTONCLearMaster           1071
 #define ID_POPUP_32771                  32771
 #define ID_POPUP_32772                  32772
 #define ID_POPUP_32773                  32773
@@ -132,7 +134,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        171
 #define _APS_NEXT_COMMAND_VALUE         32795
-#define _APS_NEXT_CONTROL_VALUE         1070
-#define _APS_NEXT_SYMED_VALUE           106
+#define _APS_NEXT_CONTROL_VALUE         1072
+#define _APS_NEXT_SYMED_VALUE           107
 #endif
 #endif
