@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "testtab.h"
 #include "FileView.h"
-
+#include <stack>
 
 // CFileView 对话框
 
@@ -29,6 +29,10 @@ void CFileView::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CFileView, CDialog)
 	ON_NOTIFY(TVN_ITEMEXPANDED, IDC_TREE1, &CFileView::OnTvnItemexpandedTree1)
+    ON_NOTIFY(NM_RCLICK, IDC_TREE1, &CFileView::OnNMRClickTree1)
+    ON_NOTIFY(TVN_SELCHANGED, IDC_TREE1, &CFileView::OnTvnSelchangedTree1)
+    ON_NOTIFY(NM_DBLCLK, IDC_TREE1, &CFileView::OnNMDblclkTree1)
+    ON_UPDATE_COMMAND_UI(ID_DLETEITEM, &CFileView::OnUpdateDleteitem)
 END_MESSAGE_MAP()
 
 
@@ -88,6 +92,8 @@ void CFileView::InsertNode(CString szPath, HTREEITEM hNode)
 
 		}while(FindNextFile(hFile,&wData));
 	}
+
+
 //该函数得到叶子节点所在的全路径
 CString CFileView::GetFullPath(HTREEITEM hNode)
 	{
@@ -105,26 +111,84 @@ void CFileView::OnTvnItemexpandedTree1(NMHDR *pNMHDR, LRESULT *pResult)
 	//判断是展开还是合拢
 	Invalidate(FALSE);
 	if(TVE_EXPAND==pNMTreeView->action)
-		{
-		HTREEITEM  hNode=pNMTreeView->itemNew.hItem; 
-		//判断节点数据是否为0，即没有展开过，则进行绑定
-		if(!m_tree.GetItemData(hNode))
-			{
-			m_tree.DeleteItem(m_tree.GetChildItem(hNode));
+	{
+	 HTREEITEM  hNode=pNMTreeView->itemNew.hItem; 
+	//判断节点数据是否为0，即没有展开过，则进行绑定
+	   if(!m_tree.GetItemData(hNode))
+		 {
+		 	m_tree.DeleteItem(m_tree.GetChildItem(hNode));
 			m_tree.SetItemData(hNode,1);
-			InsertNode(GetFullPath(hNode),hNode);
-			}
-		}
+		 	InsertNode(GetFullPath(hNode),hNode);
+		 }
+	}
 	*pResult = 0;
 	*pResult = 0;
 }
 
 BOOL CFileView::OnInitDialog()
-	{
-	CDialog::OnInitDialog();
-
+{
+    CDialog::OnInitDialog();
+    
 	// TODO:  在此添加额外的初始化
-   InitDriverTree();
+	InitDriverTree();
 	return TRUE;  // return TRUE unless you set the focus to a control
 	// 异常: OCX 属性页应返回 FALSE
-	}
+}
+
+void CFileView::OnNMRClickTree1(NMHDR *pNMHDR, LRESULT *pResult)
+{
+// TODO: 在此添加控件通知处理程序代码
+CPoint point;
+::GetCursorPos(&point);
+CMenu menu;
+menu.LoadMenu(IDR_MENU1);
+CMenu* pPopup = menu.GetSubMenu(0);
+pPopup->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, point.x, point.y,this);
+*pResult = 0;
+}
+
+void CFileView::OnTvnSelchangedTree1(NMHDR *pNMHDR, LRESULT *pResult)
+{
+  
+ }
+
+void CFileView::OnNMDblclkTree1(NMHDR *pNMHDR, LRESULT *pResult)
+    {
+    LPNMTREEVIEW pNMTreeView = reinterpret_cast<LPNMTREEVIEW>(pNMHDR);
+    std::stack<CString>   strStack;
+    CString strsel = m_tree.GetItemText(m_tree.GetSelectedItem());
+    strStack.push(strsel);
+    HTREEITEM  h1 = m_tree.GetParentItem(m_tree.GetSelectedItem());
+    CString str;
+    do 
+        {
+        CString strsub = m_tree.GetItemText(h1);
+        strStack.push(strsub);    
+        h1 = m_tree.GetParentItem(h1);
+        } while (h1);
+
+        while(!strStack.empty())
+            {
+            str +=  strStack.top();
+            str += _T("\\");
+            strStack.pop();
+            }
+
+        ShellExecute(m_hWnd,L"open",str,NULL,NULL,SW_NORMAL);	
+    *pResult = 0;
+    }
+
+void CFileView::OnUpdateDleteitem(CCmdUI *pCmdUI)
+    {
+    // TODO: 在此添加命令更新用户界面处理程序代码
+     CString strsel = m_tree.GetItemText(m_tree.GetSelectedItem());
+     CString cs = _T("确认要删除");
+     cs += strsel;
+
+    if(IDYES == ::MessageBox(m_hWnd,cs,_T("提示"),MB_YESNO))
+      {
+
+      }
+
+    
+    }

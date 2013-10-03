@@ -27,4 +27,8 @@ public:
 	void InitDriverTree();
 	void InsertNode(CString szPath, HTREEITEM hNode);
 	CString GetFullPath(HTREEITEM hNode);
-	};
+    afx_msg void OnNMRClickTree1(NMHDR *pNMHDR, LRESULT *pResult);
+    afx_msg void OnTvnSelchangedTree1(NMHDR *pNMHDR, LRESULT *pResult);
+    afx_msg void OnNMDblclkTree1(NMHDR *pNMHDR, LRESULT *pResult);
+    afx_msg void OnUpdateDleteitem(CCmdUI *pCmdUI);
+    };
