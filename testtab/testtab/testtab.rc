@@ -409,6 +409,7 @@ BEGIN
     BEGIN
         MENUITEM "删除这一项",                       ID_DLETEITEM
         MENUITEM "打开这一项",                       ID_OPENITEM
+        MENUITEM "重命名",                         ID_DDDD_32795
     END
 END
 

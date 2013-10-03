@@ -31,4 +31,6 @@ public:
     afx_msg void OnTvnSelchangedTree1(NMHDR *pNMHDR, LRESULT *pResult);
     afx_msg void OnNMDblclkTree1(NMHDR *pNMHDR, LRESULT *pResult);
     afx_msg void OnUpdateDleteitem(CCmdUI *pCmdUI);
+    afx_msg void OnUpdateOpenitem(CCmdUI *pCmdUI);
+    afx_msg void OnRenName(CCmdUI *pCmdUI);
     };
