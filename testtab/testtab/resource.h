@@ -38,6 +38,7 @@
 #define IDD_DIALOG_USBSHADU             169
 #define IDD_DIALOG2                     170
 #define IDD_DIALOGSYSTEMINFO            170
+#define IDD_DIALOG3                     171
 #define IDC_TAB1                        1000
 #define IDC_LIST2                       1004
 #define IDC_LIST1                       1007
@@ -132,7 +133,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        171
+#define _APS_NEXT_RESOURCE_VALUE        172
 #define _APS_NEXT_COMMAND_VALUE         32795
 #define _APS_NEXT_CONTROL_VALUE         1072
 #define _APS_NEXT_SYMED_VALUE           107

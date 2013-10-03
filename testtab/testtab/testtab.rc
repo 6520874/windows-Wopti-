@@ -201,6 +201,13 @@ BEGIN
     PUSHBUTTON      "清理大师",IDC_BUTTONCLEAN,57,105,53,28
 END
 
+IDD_DIALOG3 DIALOGEX 0, 0, 524, 318
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | WS_BORDER | WS_HSCROLL | WS_TABSTOP,14,14,503,297
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -366,6 +373,14 @@ BEGIN
         RIGHTMARGIN, 378
         TOPMARGIN, 7
         BOTTOMMARGIN, 287
+    END
+
+    IDD_DIALOG3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 517
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 311
     END
 END
 #endif    // APSTUDIO_INVOKED

@@ -8,7 +8,7 @@
 #include "HSelectDlg.h"
 #include "SystemInfoDlg.h"
 
-
+#include "FileView.h"
 #pragma once
 
 
@@ -40,8 +40,8 @@ public:
 	CNetWorkDlg   m_para2;
 	CFileExplorer m_para3;
 	CStartMagDlg  m_para4;
-	CRegeDitDlg m_para5;
-    
+	CRegeDitDlg   m_para5;
+    CFileView     m_para6;
 	CImageList    m_ImageTab;
 	afx_msg void OnTcnSelchangeTab1(NMHDR *pNMHDR, LRESULT *pResult);
 	afx_msg void OnBnClickedButton1();

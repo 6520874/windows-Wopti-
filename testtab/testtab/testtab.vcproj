@@ -218,15 +218,15 @@
 				>
 			</File>
 			<File
-				RelativePath=".\DDDD.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\FileExplorer.cpp"
 				>
 			</File>
 			<File
 				RelativePath=".\FileVerion.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\FileView.cpp"
 				>
 			</File>
 			<File
@@ -324,15 +324,15 @@
 				>
 			</File>
 			<File
-				RelativePath=".\DDDD.h"
-				>
-			</File>
-			<File
 				RelativePath=".\FileExplorer.h"
 				>
 			</File>
 			<File
 				RelativePath=".\FileVerion.h"
+				>
+			</File>
+			<File
+				RelativePath=".\FileView.h"
 				>
 			</File>
 			<File
