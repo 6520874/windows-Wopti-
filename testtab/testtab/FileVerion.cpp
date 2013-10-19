@@ -36,7 +36,7 @@ BOOL CFileVersion::Open(LPCTSTR lpszModuleName)
      
 	if(_tcslen(lpszModuleName) <= 0)
 	{
-		 AfxMessageBox(lpszModuleName);
+		 //AfxMessageBox(lpszModuleName);
 	}
     ASSERT(m_lpVersionData == NULL);  
     // Get the version information size for allocate the buffer  
