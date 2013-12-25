@@ -444,7 +444,6 @@ IDI_ICON5               ICON                    "res\\PROCESS.ICO"
 
 IDR_HTML_DLGCLEANRUBBISH HTML                    "DlgCleanRubbish.htm"
 IDR_HTML_BEAUMASTER     HTML                    "BeauMaster.htm"
-IDR_HTML_DDDD           HTML                    "DDDD.htm"
 
 /////////////////////////////////////////////////////////////////////////////
 //

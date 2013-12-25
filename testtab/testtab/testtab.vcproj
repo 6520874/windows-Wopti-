@@ -242,6 +242,10 @@
 				>
 			</File>
 			<File
+				RelativePath="E:\工作\System\avsh\ProcessConsumption.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\RegeDitDlg.cpp"
 				>
 			</File>
@@ -349,6 +353,10 @@
 			</File>
 			<File
 				RelativePath=".\MainDlg.h"
+				>
+			</File>
+			<File
+				RelativePath="E:\工作\System\avsh\ProcessConsumption.h"
 				>
 			</File>
 			<File
