@@ -1,7 +1,7 @@
 #pragma once
 #include "afxcmn.h"
 
-
+#include "ProcessConsumption.h"
 // Cdlg1 ¶Ô»°¿ò
 
 class CTaskMgrDlg : public CDialog
@@ -24,6 +24,7 @@ public:
 private:
 	CListCtrl m_list;
 	CImageList  m_ImageList;
+		CProcessConsumption   m_process;
 public:
 	DWORD GetProcessMemoyUse(DWORD dwProcessID);
 	CString GetProcessPath(DWORD dwprocessID);
@@ -43,5 +44,6 @@ public:
 	afx_msg void OnBnClickedCheck1();
 	afx_msg void OnBnClickedCheckDll();
 	afx_msg void OnLvnItemchangedList3(NMHDR *pNMHDR, LRESULT *pResult);
+
 };
 DWORD WINAPI RefreshDataThread(LPVOID lpParameter);

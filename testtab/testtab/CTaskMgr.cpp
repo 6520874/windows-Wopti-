@@ -10,6 +10,8 @@
 
 // Cdlg1 对话框
 
+#define  TIMER_CPUSTART   10000
+#define  TIMER_SAVECPU    10001
 #define ID_TIMER_REFRESH 1000 
 IMPLEMENT_DYNAMIC(CTaskMgrDlg, CDialog)
 
@@ -54,7 +56,7 @@ BOOL CTaskMgrDlg::OnInitDialog()
 	m_list.InsertColumn(1,L"进程名",LVCFMT_CENTER,150);
 	m_list.InsertColumn(2,L"进程ID",LVCFMT_CENTER,80);
 	m_list.InsertColumn(3,L"内存大小",LVCFMT_CENTER,80);
-	m_list.InsertColumn(4,L"CPU占用", LVCFMT_CENTER, 80);
+	m_list.InsertColumn(4,L"CPU占用%", LVCFMT_CENTER, 80);
 	m_list.InsertColumn(5,L"进程路径",LVCFMT_CENTER,500);
 	m_list.InsertColumn(6,L"文件厂商",LVCFMT_CENTER,200);
 	m_list.SetExtendedStyle(LVS_EX_FULLROWSELECT | LVS_EX_GRIDLINES);  //设置网格，全行选中
@@ -366,11 +368,11 @@ BOOL  CTaskMgrDlg::EmuProcess(void )
 		strMemUse.Format(L"%d", GetProcessMemoyUse(myProcess->dwProID));
 		strMemUse += L" K";
 		m_list.SetItemText(index,2, strMemUse);
-		double dcpu = GetCpuUsage(pinfo.th32ProcessID);
-		CString  csCpu;
-		csCpu.Format(_T("%d"),(int)dcpu);
-		m_list.SetItemText(index,3,csCpu);
-
+	
+		SetTimer(TIMER_CPUSTART,1000,0);
+		SetTimer(TIMER_SAVECPU,2000,0);
+		
+        
 		if(!wcscmp(myProcess->szExeFile,L"smss.exe"))
 		{
 			m_list.SetItemText(index,4,L"C:\\WINDOWS\\system32\\smss.exe"); 
@@ -648,6 +650,44 @@ void CTaskMgrDlg::OnTimer(UINT_PTR nIDEvent)
 		 CString strCntProcess;
 		 strCntProcess.Format(L"进程数：%d", m_list.GetItemCount());
 		 SetDlgItemText(IDC_NUM_PROC,strCntProcess);
+	 }
+
+	 else if(nIDEvent== TIMER_CPUSTART)
+	 {
+        m_process.Start();
+
+	 }
+	 else if(nIDEvent == TIMER_SAVECPU)
+	 {
+
+		 MAP_CPUMEM_INFO mapInfo;
+		 m_process.GetInfoMap(mapInfo);
+		 for (MAP_CPUMEM_INFO::iterator it=mapInfo.begin(); it!=mapInfo.end(); ++it)
+		 {
+			 int			iProcessId		= it->second.iProcessId;
+			 CString		strProcessName	= CA2T(it->second.strProcessName.c_str());
+			 double		dbCpuUsage		= it->second.dbCpuUsage;
+			 double		dbMemUseage		= it->second.dbMemUsage;
+
+			 int iCpuPercent = (int)m_process.CpuToPercent(dbCpuUsage);
+			 int iMemPercent = (int)m_process.MemToPercent(dbMemUseage);
+		      
+			for(int i =0 ;i<m_list.GetItemCount();i++)
+			{
+				CString cs = m_list.GetItemText(i,0); 
+				USES_CONVERSION;
+				CString csProcessname  = A2CW(it->second.strProcessName.c_str());
+				if(!cs.Compare(csProcessname))
+				{
+					cs.Format(L"%d",iCpuPercent);
+					m_list.SetItemText(i,3,cs);
+				}
+			}
+
+			 //m_list.SetDlgItemText()
+
+		 }
+
 	 }
 	 
 	CDialog::OnTimer(nIDEvent);
